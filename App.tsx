@@ -26,6 +26,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import Web3 from 'web3';
+import { ethers } from 'ethers';
 // In Node.js use: const Web3 = require('web3');
 const ganacheUrl =
   'https://goerli.infura.io/v3/7956501765a44392ba7a9637af45e54c';
@@ -71,10 +72,10 @@ function App(): JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
   useEffect(() => {
-    // const w = ethers.Wallet.createRandom();
-    // console.log({ walletObject: w, mnemonic: w.mnemonic });
+    const w = ethers.Wallet.createRandom();
+    console.log('ethers', w);
     let accounts = web3.eth.accounts.create();
-    console.log(accounts);
+    console.log('web3', accounts);
   }, []);
 
   return (

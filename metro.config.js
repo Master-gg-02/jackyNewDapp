@@ -1,6 +1,6 @@
 const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
 
-const extraNodeModules = require('node-libs-browser');
+const extraNodeModules = require('node-libs-react-native');
 /**
  * Metro configuration
  * https://facebook.github.io/metro/docs/configuration

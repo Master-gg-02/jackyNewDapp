@@ -1,6 +1,12 @@
 /**
  * @format
  */
+import 'react-native-get-random-values';
+// import 'react-native-randombytes';
+
+import '@ethersproject/shims';
+import 'node-libs-react-native/globals.js';
+
 import './shim';
 import {AppRegistry} from 'react-native';
 import App from './App';

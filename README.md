@@ -55,7 +55,6 @@ Now that you have successfully run the app, let's modify it.
 
    For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
 
-
 # Troubleshooting
 
 ## 1.react-native-os 编译不通过
@@ -67,6 +66,7 @@ Now that you have successfully run the app, let's modify it.
 
 android.support.annotation.Nullable; 不存在
 
+解决方法：
 在 build.gradle 文件添加以下依赖：
 
 ```
@@ -83,10 +83,22 @@ import androidx.annotation.Nullable;
 
 ## 2.wifi.WifiManager 不存在
 
+解决方法：
+
 ```
 import android.content.Context;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+```
+
+### 针对 2.3. 问题 可以采用以下方法更好
+
+升级依赖此项目的模块
+执行更新
+
+```
+yarn add react-native-tcp
+yarn add react-native-udp
 ```
 
 # Note
@@ -100,3 +112,5 @@ import android.net.wifi.WifiManager;
 [1.android.support.annotation 不存在](https://blog.csdn.net/liting870907/article/details/121158951)
 
 [2.wifi.WifiManager 不存在](https://blog.csdn.net/niudaly/article/details/27678395)
+
+[3.ios 编译 failed](https://levelup.gitconnected.com/tutorial-how-to-set-up-web3js-1-x-with-react-native-0-6x-2021-467b2e0c94a4)
