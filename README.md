@@ -66,12 +66,19 @@ Now that you have successfully run the app, let's modify it.
 
 # Troubleshooting
 
-## 1.react-native-os 编译不通过
+## 1.react-native-os react-native-tcp 编译不通过
 
 解决方法：
 修改 react-native-os 项目的 build.gradle compile 为 implementation
 
-## 2.程序包 android.support.annotation 不存在
+最终修改
+
+```
+yarn add @metamask/react-native-tcp
+yarn add @vmagination/react-native-os
+```
+
+## 2.程序包 react-native-tcp android.support.annotation 不存在
 
 android.support.annotation.Nullable; 不存在
 
@@ -83,6 +90,9 @@ dependencies {
    implementation 'androidx.annotation:annotation:1.1.0'
 }
 ```
+
+方法二
+在 1 中已经解决
 
 在代码中将相关引用改为
 
@@ -100,15 +110,13 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 ```
 
-### 针对 2.3. 问题 可以采用以下方法更好
+### 针对 3. 问题 可以采用以下方法更好
 
 升级依赖此项目的模块
 执行更新
 
 ```bash
-yarn add react-native-tcp
 yarn add react-native-udp
-
 ```
 
 # Learn More
@@ -120,5 +128,3 @@ yarn add react-native-udp
 [2.wifi.WifiManager 不存在](https://blog.csdn.net/niudaly/article/details/27678395)
 
 [3.ios 编译 failed](https://levelup.gitconnected.com/tutorial-how-to-set-up-web3js-1-x-with-react-native-0-6x-2021-467b2e0c94a4)
-
-

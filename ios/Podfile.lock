@@ -492,10 +492,11 @@ PODS:
     - React-jsi (= 0.72.4)
     - React-logger (= 0.72.4)
     - React-perflogger (= 0.72.4)
-  - RNOS (1.2.6):
+  - RNOS (1.2.8):
     - React
   - SocketRocket (0.6.1)
   - TcpSockets (4.0.0):
+    - CocoaAsyncSocket
     - React
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -567,8 +568,8 @@ DEPENDENCIES:
   - React-runtimescheduler (from `../node_modules/react-native/ReactCommon/react/renderer/runtimescheduler`)
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
-  - RNOS (from `../node_modules/react-native-os`)
-  - TcpSockets (from `../node_modules/react-native-tcp`)
+  - "RNOS (from `../node_modules/@vmagination/react-native-os`)"
+  - "TcpSockets (from `../node_modules/@metamask/react-native-tcp`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -673,9 +674,9 @@ EXTERNAL SOURCES:
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
   RNOS:
-    :path: "../node_modules/react-native-os"
+    :path: "../node_modules/@vmagination/react-native-os"
   TcpSockets:
-    :path: "../node_modules/react-native-tcp"
+    :path: "../node_modules/@metamask/react-native-tcp"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -733,12 +734,12 @@ SPEC CHECKSUMS:
   React-runtimescheduler: 4941cc1b3cf08b792fbf666342c9fc95f1969035
   React-utils: b79f2411931f9d3ea5781404dcbb2fa8a837e13a
   ReactCommon: 4b2bdcb50a3543e1c2b2849ad44533686610826d
-  RNOS: 6f2f9a70895bbbfbdad7196abd952e7b01d45027
+  RNOS: 61cf68ace4231258ce9edae6a28a0bfef86aaf3e
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
-  TcpSockets: 4ef55305239923b343ed0a378b1fac188b1373b0
+  TcpSockets: 0812589a2e488aefcbd0fdd442606bb18f20e2a7
   Yoga: 3efc43e0d48686ce2e8c60f99d4e6bd349aff981
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: b82fe3b2bce9bd43a6b4f42c597d34c51af603ed
+PODFILE CHECKSUM: 2d5e4cefc093c8e7c87edaf0d5d986fbb1333b2b
 
 COCOAPODS: 1.12.1
