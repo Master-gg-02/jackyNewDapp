@@ -2,7 +2,7 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 ## Step 1: Start the Metro Server
 
@@ -55,25 +55,48 @@ Now that you have successfully run the app, let's modify it.
 
    For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
 
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
 
 # Troubleshooting
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## 1.react-native-os 编译不通过
+
+解决方法：
+修改 react-native-os 项目的 build.gradle compile 为 implementation
+
+## 2.程序包 android.support.annotation 不存在
+
+android.support.annotation.Nullable; 不存在
+
+在 build.gradle 文件添加以下依赖：
+
+```
+dependencies {
+   implementation 'androidx.annotation:annotation:1.1.0'
+}
+```
+
+在代码中将相关引用改为
+
+```
+import androidx.annotation.Nullable;
+```
+
+## 2.wifi.WifiManager 不存在
+
+```
+import android.content.Context;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
+```
+
+# Note
+
+该项目仅支持 web3js.1.10 以下的版本
 
 # Learn More
 
-To learn more about React Native, take a look at the following resources:
+报错引用的文章
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+[1.android.support.annotation 不存在](https://blog.csdn.net/liting870907/article/details/121158951)
+
+[2.wifi.WifiManager 不存在](https://blog.csdn.net/niudaly/article/details/27678395)

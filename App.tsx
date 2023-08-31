@@ -5,8 +5,8 @@
  * @format
  */
 
-import React from 'react';
-import type {PropsWithChildren} from 'react';
+import React, { useEffect } from 'react';
+import type { PropsWithChildren } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -25,11 +25,20 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import Web3 from 'web3';
+// In Node.js use: const Web3 = require('web3');
+const ganacheUrl =
+  'https://goerli.infura.io/v3/7956501765a44392ba7a9637af45e54c';
+const httpProvider = new Web3.providers.HttpProvider(ganacheUrl);
+const web3 = new Web3(httpProvider); //web3js.4x
+
+// const web3 = new Web3(Web3.givenProvider || ganacheUrl); // web3js.1x
+
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
-function Section({children, title}: SectionProps): JSX.Element {
+function Section({ children, title }: SectionProps): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
@@ -61,6 +70,12 @@ function App(): JSX.Element {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+  useEffect(() => {
+    // const w = ethers.Wallet.createRandom();
+    // console.log({ walletObject: w, mnemonic: w.mnemonic });
+    let accounts = web3.eth.accounts.create();
+    console.log(accounts);
+  }, []);
 
   return (
     <SafeAreaView style={backgroundStyle}>
