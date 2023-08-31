@@ -1,8 +1,17 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+这是一个集成了 web3.js 和 ethers.js 的项目案例
 
 # Getting Started
 
-> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Note**: 1.请确认是否安装 [RN 基础环境](https://reactnative.dev/docs/environment-setup)
+> 2、该项目仅支持 web3js.1.10 以下的版本
+> 3、如果想使用本项目作为脚手架可以执行以下命令
+
+```bash
+npx react-native-rename@latest "your_project_name"
+
+```
+
+项目的根文件夹名字不会更改，可自行修改
 
 ## Step 1: Start the Metro Server
 
@@ -96,14 +105,11 @@ import android.net.wifi.WifiManager;
 升级依赖此项目的模块
 执行更新
 
-```
+```bash
 yarn add react-native-tcp
 yarn add react-native-udp
+
 ```
-
-# Note
-
-该项目仅支持 web3js.1.10 以下的版本
 
 # Learn More
 
@@ -114,3 +120,5 @@ yarn add react-native-udp
 [2.wifi.WifiManager 不存在](https://blog.csdn.net/niudaly/article/details/27678395)
 
 [3.ios 编译 failed](https://levelup.gitconnected.com/tutorial-how-to-set-up-web3js-1-x-with-react-native-0-6x-2021-467b2e0c94a4)
+
+
