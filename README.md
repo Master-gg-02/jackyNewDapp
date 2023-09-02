@@ -3,15 +3,16 @@
 # Getting Started
 
 > **Note**: 1.请确认是否安装 [RN 基础环境](https://reactnative.dev/docs/environment-setup)
+
 > 2、该项目仅支持 web3js.1.10 以下的版本
+
 > 3、如果想使用本项目作为脚手架可以执行以下命令
 
 ```bash
 npx react-native-rename@latest "your_project_name"
+# 项目的根文件夹名字不会更改，可自行修改
 
 ```
-
-项目的根文件夹名字不会更改，可自行修改
 
 ## Step 1: Start the Metro Server
 
