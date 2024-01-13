@@ -27,12 +27,19 @@ import {
 
 import Web3 from 'web3';
 import { ethers } from 'ethers';
+const crypto = require('crypto');
+// import crypto from 'crypto'
+const secret = 'open-sesame';
 // In Node.js use: const Web3 = require('web3');
 const ganacheUrl =
   'https://goerli.infura.io/v3/7956501765a44392ba7a9637af45e54c';
 const httpProvider = new Web3.providers.HttpProvider(ganacheUrl);
 const web3 = new Web3(httpProvider); //web3js.4x
 
+const hash = crypto.createHmac('sha256', secret)
+  .update('abcdefg')
+  .digest('hex');
+console.log(hash);
 // const web3 = new Web3(Web3.givenProvider || ganacheUrl); // web3js.1x
 
 type SectionProps = PropsWithChildren<{
