@@ -1,24 +1,33 @@
 这是一个集成了 web3.js 和 ethers.js 的项目案例
 
-# Getting Started
+# 环境准备
+   预备知识：
+ > 1. 本项目基于 React Native 0.63.4 版本，如果你还不熟悉 React Native，请先阅读[官方文档](https://reactnative.dev/docs/getting-started)。
+ > 
+ > 2. 本项目使用 web3.js 1.10.0 版本，如果你还不熟悉 web3.js，请先阅读[官方文档](https://web3js.readthedocs.io/en/v1.10.0/)。
+ > 3. 本项目使用 ethers.js 5.0.3 版本，如果你还不熟悉 ethers.js，请先阅读[官方文档](https://docs.ethers.io/v5/)。
+ > 4. blockchain 相关知识，如果你还不了解，请先阅读[区块链白皮书](https://bitcoin.org/bitcoin.pdf)。
+ > 5. 本项目默认使用者具备前端技术js、nodejs、npm、yarn 等相关知识
+ > 6. 请确认是否安装 [RN 基础环境](https://reactnative.dev/docs/environment-setup)
 
-> **Note**: 1.请确认是否安装 [RN 基础环境](https://reactnative.dev/docs/environment-setup)
 
-> 2、该项目仅支持 web3js.1.10 以下的版本
+# 如果想使用本项目作为脚手架可以执行以下命令
 
-> 3、如果想使用本项目作为脚手架可以执行以下命令
-
+## 1. 使用项目模板创建项目
 ```bash
 npx react-native-rename@latest "your_project_name"
-# 项目的根文件夹名字不会更改，可自行修改
-
+# your_project_name项目的根文件夹，根据需要自行修改
 ```
 
-## Step 1: Start the Metro Server
+## 2: 安装依赖
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
-
-To start Metro, run the following command from the _root_ of your React Native project:
+```bash
+# 使用 npm
+npm install
+# 或者使用 Yarn
+yarn install
+```
+## 3：启动metro bundler
 
 ```bash
 # using npm
@@ -28,11 +37,9 @@ npm start
 yarn start
 ```
 
-## Step 2: Start your Application
+##  4: 启动模拟器或真机
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
+###  Android
 
 ```bash
 # using npm
@@ -42,7 +49,7 @@ npm run android
 yarn android
 ```
 
-### For iOS
+###  iOS
 
 ```bash
 # using npm
@@ -52,19 +59,16 @@ npm run ios
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
+# 5: 编辑项目
 
 1. Open `App.tsx` in your text editor of choice and edit some lines.
+1. 打开 `App.tsx` 文件，编辑其中一些代码。
 2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+2. **Android**: 按两次 <kbd>R</kbd> 键或者从 **Developer Menu** 中选择 **"Reload"** 
+   (<kbd>Ctrl</kbd> + <kbd>M</kbd> (在 Windows 和 Linux 上) 或 <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (在 macOS 上))来查看你的修改！
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
+    **iOS**: 在 iOS 模拟器中按 <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> 来重新加载应用并查看你的修改！
 # Troubleshooting
 
 ## 1.react-native-os react-native-tcp 编译不通过
